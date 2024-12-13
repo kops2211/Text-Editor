@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor Canvas</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Poppins:wght@200&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="celebrarecompany_logo.jpg" alt="Celebrare Logo" class="logo">
+        <h1>Celebrare</h1>
+    </header>
+    <section>
+        <div class="container">
+            <h1>About Celebrare</h1>
+            <p>Celebrare is a startup by alumni of IIT Hyderabad working in the digital India sector to transform the wedding invitations market.</p>
+        </div>
+    </section>
+    <div id="toolbar">
+        <button onclick="addText()">Add Text</button>
+        <select id="fontSelector" onchange="changeFont()">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+        </select>
+        <input type="number" id="fontSize" placeholder="Font Size" onchange="changeFontSize()" />
+        <button onclick="toggleBold()">Bold</button>
+        <button onclick="toggleItalic()">Italic</button>
+        <button onclick="toggleUnderline()">Underline</button>
+        <button onclick="undo()">Undo</button>
+        <button onclick="redo()">Redo</button>
+    </div>
+    <div id="canvas">
+        <div id="image-swiper" class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="image.png" alt="Portrait 1" class="portrait">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images1.jpg" alt="Portrait 2" class="portrait">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images2.jpg" alt="Portrait 3" class="portrait">
+                </div>
+            </div>
+            
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div id="text-overlay"></div> 
+    </div>
+    <footer>
+        <p>&copy; 2024 Celebrare. All rights reserved.</p>
+    </footer>
+
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>
